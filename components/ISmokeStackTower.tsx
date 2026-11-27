@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Text } from "@react-three/drei";
+import { Text, Billboard } from "@react-three/drei";
 import * as THREE from "three";
 
 interface Props {
@@ -66,31 +66,36 @@ export function ISmokeStackTower({ position }: Props) {
         />
       </mesh>
 
-      {/* Tower Title */}
-      <Text
-        position={[0, 11, 1.8]}
-        fontSize={0.5}
-        color="#FFFFFF"
-        anchorX="center"
-        anchorY="middle"
-        outlineWidth={0.04}
-        outlineColor="#001815"
-      >
-        i-SmokeStack
-      </Text>
+      {/* ========================================================= */}
+      {/*  BILLBOARD: Always faces camera directly                  */}
+      {/* ========================================================= */}
+      <Billboard position={[0, 11, 0]} follow={true}>
+        {/* Tower Title */}
+        <Text
+          position={[0, 0.5, 0]}
+          fontSize={0.65}
+          color="#FFFFFF"
+          anchorX="center"
+          anchorY="middle"
+          outlineWidth={0.05}
+          outlineColor="#001815"
+        >
+          i-SmokeStack
+        </Text>
 
-      {/* Slogan */}
-      <Text
-        position={[0, 10.2, 1.8]}
-        fontSize={0.25}
-        color="#81ECEC"
-        anchorX="center"
-        anchorY="middle"
-        outlineWidth={0.02}
-        outlineColor="#001815"
-      >
-        "Do More by Doing Less"
-      </Text>
+        {/* Slogan */}
+        <Text
+          position={[0, -0.2, 0]}
+          fontSize={0.32}
+          color="#81ECEC"
+          anchorX="center"
+          anchorY="middle"
+          outlineWidth={0.03}
+          outlineColor="#001815"
+        >
+          "Do More by Doing Less"
+        </Text>
+      </Billboard>
     </group>
   );
 }

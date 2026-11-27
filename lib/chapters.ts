@@ -13,6 +13,9 @@ export interface StationData {
   end: number | string;
   place?: string;
   note?: string;
+  logo?: string; // Optional image URL or /logos/brand.svg
+  website?: string; // Optional company or institution link
+  skills?: string[]; // Optional skill tags
 }
 
 export interface Palette {
