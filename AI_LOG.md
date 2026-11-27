@@ -24,3 +24,28 @@
 - **"Sonia Specialist"** appears once, in the Entrepreneur chapter.
 - **sonia.json** imported as a TypeScript module (bundled by webpack), not
   fetched at runtime from `public/`.
+
+---
+
+## Slice 2 — All chapters + landmarks + info cards + year ticker + i-SmokeStack tower
+
+**Date:** 2026-11-27
+
+### Decisions & Implementation
+
+- **All 7 Chapters Activated:** All 21 career stations now render 3D landmark
+  buildings with floating station titles and hover highlight beacons.
+- **Interactivity:** Added pointer-over hover feedback (cursor pointer, scale
+  transition, beacon illumination) and click/tap raycasting via R3F.
+- **InfoCard:** Responsive glassmorphism overlay dialog displaying station name,
+  role, years (1999 → 2026), location, and historical notes verbatim from `sonia.json`.
+  Supports backdrop dismissal, close button, and `Escape` keyboard dismissal.
+- **YearCounter HUD:** Floating top-left HUD dynamically interpolating years
+  (1999 → 2026) without ever calculating or displaying age (strict adherence to HARD RULES).
+  Displays active chapter/era with responsive brand header.
+- **i-SmokeStack Terminal Tower:** Built with geometric primitives, neon cyan/lime
+  materials, dual neon rings, beacon spire, and 3D floating 3D text with the
+  mantra: `"Do More by Doing Less"`.
+- **Canvas Pointer Events:** Changed from `pointer-events: none` to allowing
+  interactive 3D click/tap raycasting while window scroll cleanly propagates for desktop
+  mouse wheels and mobile touch gestures.

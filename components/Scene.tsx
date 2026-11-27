@@ -3,19 +3,19 @@
 import { useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import { PATH_COORDS, chapters } from "@/lib/chapters";
+import { PATH_COORDS, chapters, StationData } from "@/lib/chapters";
 import { World } from "./World";
 import { Character } from "./Character";
 import { Landmark } from "./Landmark";
 import { Tower } from "./Tower";
+import { ISmokeStackTower } from "./ISmokeStackTower";
 
 /* ------------------------------------------------------------------ */
 /*  Precomputed landmark placement data                                */
 /* ------------------------------------------------------------------ */
 
 interface LandmarkEntry {
-  stationName: string;
-  stationStart: number;
+  station: StationData;
   chapterIndex: number;
   position: [number, number, number];
   accentColor: string;
@@ -25,20 +25,24 @@ interface LandmarkEntry {
 /*  Experience (lives inside <Canvas>)                                 */
 /* ------------------------------------------------------------------ */
 
-function Experience() {
+interface ExperienceProps {
+  onSelectStation: (station: StationData) => void;
+}
+
+function Experience({ onSelectStation }: ExperienceProps) {
   const curve = useMemo(() => {
     const pts = PATH_COORDS.map(([x, y, z]) => new THREE.Vector3(x, y, z));
     return new THREE.CatmullRomCurve3(pts);
   }, []);
 
-  /* Compute landmark world positions from their chapter progress ranges */
+  /* Compute landmark world positions for all 7 chapters */
   const landmarks: LandmarkEntry[] = useMemo(() => {
     return chapters.flatMap((ch, chIdx) =>
       ch.stations.map((station, sIdx) => {
         const range = ch.progressEnd - ch.progressStart;
         const count = ch.stations.length;
         const t = ch.progressStart + (range * (sIdx + 1)) / (count + 1);
-        const clamped = Math.min(t, 0.999);
+        const clamped = Math.min(Math.max(t, 0.01), 0.985);
 
         const point = curve.getPointAt(clamped);
         const tangent = curve.getTangentAt(clamped);
@@ -48,11 +52,10 @@ function Experience() {
         const nz = tangent.x;
         const len = Math.sqrt(nx * nx + nz * nz) || 1;
         const side = sIdx % 2 === 0 ? 1 : -1;
-        const offset = 3.5;
+        const offset = 3.6;
 
         return {
-          stationName: station.name,
-          stationStart: station.start,
+          station,
           chapterIndex: chIdx,
           position: [
             point.x + (nx / len) * offset * side,
@@ -69,27 +72,30 @@ function Experience() {
     <>
       <World />
 
-      {/* Visible path (brown tube along the curve) */}
+      {/* Visible path (brown/golden tube along the curve) */}
       <mesh>
-        <tubeGeometry args={[curve, 300, 0.12, 8, false]} />
-        <meshStandardMaterial color="#8B6914" />
+        <tubeGeometry args={[curve, 350, 0.16, 8, false]} />
+        <meshStandardMaterial color="#A0782A" roughness={0.6} />
       </mesh>
 
       <Character curve={curve} />
 
-      {/* Slice 1: landmarks for first 3 chapters (School, College, B-schools) */}
-      {landmarks
-        .filter((l) => l.chapterIndex < 3)
-        .map((l) => (
-          <Landmark
-            key={`${l.stationName}-${l.stationStart}`}
-            position={l.position}
-            name={l.stationName}
-            accentColor={l.accentColor}
-          />
-        ))}
+      {/* Render interactive landmarks for ALL stations */}
+      {landmarks.map((l) => (
+        <Landmark
+          key={`${l.station.name}-${l.station.start}`}
+          position={l.position}
+          station={l.station}
+          accentColor={l.accentColor}
+          onSelect={onSelectStation}
+        />
+      ))}
 
+      {/* Monolithic growing chapter tower */}
       <Tower />
+
+      {/* i-SmokeStack destination tower at the end of the path */}
+      <ISmokeStackTower position={[80, 0, 0]} />
     </>
   );
 }
@@ -98,14 +104,18 @@ function Experience() {
 /*  Canvas wrapper (default export for dynamic import)                 */
 /* ------------------------------------------------------------------ */
 
-export default function SceneCanvas() {
+interface SceneCanvasProps {
+  onSelectStation: (station: StationData) => void;
+}
+
+export default function SceneCanvas({ onSelectStation }: SceneCanvasProps) {
   return (
     <Canvas
-      camera={{ position: [-46, 6, -8], fov: 60, near: 0.1, far: 200 }}
-      gl={{ antialias: true }}
+      camera={{ position: [-46, 6, -8], fov: 60, near: 0.1, far: 250 }}
+      gl={{ antialias: true, alpha: false }}
       style={{ width: "100%", height: "100%" }}
     >
-      <Experience />
+      <Experience onSelectStation={onSelectStation} />
     </Canvas>
   );
 }
