@@ -171,11 +171,10 @@ export default function Home() {
 
       {/* Final Scene Contact Form Section (revealed as visitor reaches i-SmokeStack era) */}
       <div
-        className={`fixed bottom-6 right-6 z-40 transition-all duration-700 ease-out max-w-sm hidden sm:block ${
-          inFinalChapter && !isContactOpen
+        className={`fixed bottom-6 right-6 z-40 transition-all duration-700 ease-out max-w-sm hidden sm:block ${inFinalChapter && !isContactOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-10 pointer-events-none"
-        }`}
+          }`}
       >
         <ContactForm />
       </div>

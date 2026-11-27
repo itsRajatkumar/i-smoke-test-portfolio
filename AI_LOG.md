@@ -86,3 +86,31 @@
   - Real-time KPI summary (Unique Visitors, Total Inquiries, Tracked Events).
   - Visual horizontal bar charts for Chapter Drop-off Funnel and Most Opened Career Stations.
   - Full Messages Inbox with sender info, timestamps, and full messages.
+
+---
+
+## Slice 4 — Realistic Female Character in Indian Attire, Motion Accessibility & Polish
+
+**Date:** 2026-11-27
+
+### Decisions & Implementation
+
+- **Female Character in Indian Attire (Pure Primitives):**
+  - Designed an authentic, stylized Indian attire character using Three.js geometric primitives without any external asset files (strict adherence to MASTER_PROMPT constraints).
+  - Features:
+    - Silk Kurta in royal teal (`#0E4D64`) with flared silhouette and golden zari embroidered yoke and hem.
+    - Draped crimson dupatta (`#9B2335`) across chest with trailing shoulder sash that features dynamic sway physics.
+    - Cream churidar trousers (`#EAE6DF`) and traditional matching pointed juttis.
+    - Styled dark hair with classic low chignon bun accented with a golden gajra/pin ring.
+    - Traditional crimson red bindi on forehead and golden jhumka earrings.
+    - Stacked golden bangles (choodiyan) on both wrists.
+- **Accessibility & `prefers-reduced-motion`:**
+  - Added native media query listeners for `prefers-reduced-motion: reduce`.
+  - When enabled: pauses walk cycle gait swinging, sets limbs to a poised upright stance, disables torso bobbing, eases camera tracking, and speeds up palette transitions.
+- **Mobile & Performance Optimization:**
+  - Clamped `dpr={[1, 1.75]}` on Canvas to avoid GPU throttling and battery drain on high-density displays.
+  - Dynamic camera distance and FOV adjustments for mobile viewports.
+  - Enhanced touch scrolling and responsive modal scaling.
+  - Decorated the landscape with low-poly foliage (pine trees and garden stones).
+- **Documentation:**
+  - Added comprehensive `README.md` documenting setup, architecture, and deployment instructions.

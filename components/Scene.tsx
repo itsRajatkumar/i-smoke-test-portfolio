@@ -72,12 +72,13 @@ function Experience({ onSelectStation }: ExperienceProps) {
     <>
       <World />
 
-      {/* Visible path (brown/golden tube along the curve) */}
+      {/* Visible path (refined stone border and pathway along the curve) */}
       <mesh>
-        <tubeGeometry args={[curve, 350, 0.16, 8, false]} />
-        <meshStandardMaterial color="#A0782A" roughness={0.6} />
+        <tubeGeometry args={[curve, 350, 0.18, 8, false]} />
+        <meshStandardMaterial color="#B58D3D" roughness={0.65} metalness={0.1} />
       </mesh>
 
+      {/* Realistic female character in Indian attire */}
       <Character curve={curve} />
 
       {/* Render interactive landmarks for ALL stations */}
@@ -111,9 +112,10 @@ interface SceneCanvasProps {
 export default function SceneCanvas({ onSelectStation }: SceneCanvasProps) {
   return (
     <Canvas
-      camera={{ position: [-46, 6, -8], fov: 60, near: 0.1, far: 250 }}
-      gl={{ antialias: true, alpha: false }}
-      style={{ width: "100%", height: "100%" }}
+      camera={{ position: [-46, 6, -8], fov: 58, near: 0.1, far: 260 }}
+      dpr={[1, 1.75]}
+      gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
+      style={{ width: "100%", height: "100%", touchAction: "none" }}
     >
       <Experience onSelectStation={onSelectStation} />
     </Canvas>
