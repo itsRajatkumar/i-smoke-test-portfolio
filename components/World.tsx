@@ -54,29 +54,46 @@ export function World() {
     }
   });
 
-  /* Scatter decorative low-poly trees and garden stones along the path */
+  /* Scatter decorative low-poly trees and garden stones strictly away from the road */
   const foliage = useMemo(() => {
+    const pts = PATH_COORDS.map(([x, y, z]) => new THREE.Vector3(x, y, z));
+    const curve = new THREE.CatmullRomCurve3(pts);
     const items: Array<{
       pos: [number, number, number];
       type: "tree" | "stone";
       scale: number;
     }> = [];
 
-    PATH_COORDS.forEach(([x, , z], idx) => {
-      if (idx % 2 === 0) {
-        // Place on either side of the path at comfortable distance
-        items.push({
-          pos: [x + 6 + (idx % 3), 0, z - 7 - (idx % 4)],
-          type: "tree",
-          scale: 0.8 + (idx % 4) * 0.2,
-        });
-        items.push({
-          pos: [x - 5 - (idx % 2), 0, z + 6 + (idx % 3)],
-          type: "stone",
-          scale: 0.6 + (idx % 3) * 0.25,
-        });
-      }
-    });
+    const steps = 36;
+    for (let i = 1; i < steps; i++) {
+      const u = i / steps;
+      const pt = curve.getPointAt(u);
+      const tangent = curve.getTangentAt(u).normalize();
+
+      // Perpendicular unit vector in XZ plane
+      const nx = -tangent.z;
+      const nz = tangent.x;
+      const len = Math.sqrt(nx * nx + nz * nz) || 1;
+      const normX = nx / len;
+      const normZ = nz / len;
+
+      // Left landscape corridor: strictly 8.0m to 14.0m away from road center
+      const leftDist = 8.5 + ((i * 3) % 5);
+      items.push({
+        pos: [pt.x - normX * leftDist, 0, pt.z - normZ * leftDist],
+        type: "tree",
+        scale: 0.85 + (i % 3) * 0.25,
+      });
+
+      // Right landscape corridor: strictly 9.0m to 15.0m away from road center
+      const rightDist = 9.0 + ((i * 5) % 5);
+      const isStone = i % 2 === 0;
+      items.push({
+        pos: [pt.x + normX * rightDist, 0, pt.z + normZ * rightDist],
+        type: isStone ? "stone" : "tree",
+        scale: isStone ? 0.6 + (i % 3) * 0.25 : 0.9 + (i % 4) * 0.2,
+      });
+    }
 
     return items;
   }, []);
@@ -97,7 +114,7 @@ export function World() {
       {/* Ground plane */}
       <mesh rotation-x={-Math.PI / 2} position={[20, -0.12, 0]}>
         <planeGeometry args={[300, 300]} />
-        <meshStandardMaterial color="#4A6B36" roughness={0.9} />
+        <meshStandardMaterial color="#3E582E" roughness={0.9} />
       </mesh>
 
       {/* Decorative low-poly foliage along the path */}

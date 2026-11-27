@@ -480,17 +480,21 @@ export function Landmark({ position, station, accentColor, onSelect }: Props) {
     }
   };
 
-  // Adjust height of floating billboard according to building height
+  // Elevated billboard height strictly above each building structure
   const billboardHeight =
     station.chapter === "Global leadership"
-      ? 4.8
+      ? 5.8
       : station.chapter === "Corporate"
-      ? 4.2
-      : station.chapter === "School"
-      ? 3.6
+      ? 5.2
       : station.chapter === "College"
-      ? 3.4
-      : 3.1;
+      ? 4.7
+      : station.chapter === "School"
+      ? 4.3
+      : station.chapter === "B-schools"
+      ? 3.9
+      : station.chapter === "Fractional CMO era"
+      ? 3.9
+      : 3.7;
 
   return (
     <group
@@ -504,6 +508,12 @@ export function Landmark({ position, station, accentColor, onSelect }: Props) {
       {/* Procedural architectural building model */}
       {renderBuilding()}
 
+      {/* Slender mounting mast connecting building roof to the floating name board */}
+      <mesh position={[0, billboardHeight / 2, 0]}>
+        <cylinderGeometry args={[0.025, 0.025, billboardHeight, 8]} />
+        <meshStandardMaterial color="#9E9E9E" metalness={0.7} roughness={0.3} />
+      </mesh>
+
       {/* Floating landmark beacon/marker */}
       <mesh position={[0, billboardHeight - 0.45, 0]}>
         <octahedronGeometry args={[0.18, 0]} />
@@ -515,59 +525,66 @@ export function Landmark({ position, station, accentColor, onSelect }: Props) {
       </mesh>
 
       {/* ========================================================= */}
-      {/*  BILLBOARD: Always faces camera directly from any angle   */}
+      {/*  BILLBOARD: Positioned cleanly ON TOP with zero clipping  */}
       {/* ========================================================= */}
       <Billboard position={[0, billboardHeight, 0]} follow={true}>
-        {/* Signboard Backing Pill for maximum contrast & visibility */}
-        <mesh position={[0, 0, -0.02]}>
-          <planeGeometry args={[2.8, 0.65]} />
+        {/* Signboard Backing Pill with ample width & contrast */}
+        <mesh position={[0, 0, -0.02]} renderOrder={10}>
+          <planeGeometry args={[3.2, 0.72]} />
           <meshBasicMaterial
-            color="#0b1118"
+            color="#080D14"
             transparent={true}
-            opacity={hovered ? 0.94 : 0.84}
+            opacity={hovered ? 0.96 : 0.88}
+            depthTest={false}
           />
         </mesh>
 
         {/* Brand/Initials Badge */}
-        <mesh position={[-1.05, 0, 0]}>
-          <circleGeometry args={[0.2, 24]} />
-          <meshBasicMaterial color={hovered ? "#38E8D0" : accentColor} />
+        <mesh position={[-1.2, 0, 0]} renderOrder={11}>
+          <circleGeometry args={[0.22, 24]} />
+          <meshBasicMaterial
+            color={hovered ? "#38E8D0" : accentColor}
+            depthTest={false}
+          />
         </mesh>
         <Text
-          position={[-1.05, 0, 0.01]}
-          fontSize={0.15}
-          color="#0b1118"
+          position={[-1.2, 0, 0.01]}
+          fontSize={0.16}
+          color="#080D14"
           anchorX="center"
           anchorY="middle"
           fontWeight="bold"
+          renderOrder={12}
         >
           {initials}
         </Text>
 
-        {/* Station Name - Always camera facing */}
+        {/* Station Name - Always camera facing and floating clearly on top */}
         <Text
-          position={[0.1, 0.07, 0]}
-          fontSize={0.2}
+          position={[0.15, 0.08, 0]}
+          fontSize={0.21}
           color={hovered ? "#38E8D0" : "#ffffff"}
           anchorX="center"
           anchorY="middle"
-          outlineWidth={0.02}
+          outlineWidth={0.025}
           outlineColor="#000000"
-          maxWidth={2.0}
+          maxWidth={2.2}
           textAlign="left"
+          renderOrder={12}
         >
           {station.name}
         </Text>
 
         {/* Role or Years subtext */}
         <Text
-          position={[0.1, -0.14, 0]}
-          fontSize={0.12}
+          position={[0.15, -0.16, 0]}
+          fontSize={0.13}
           color="#A0AEC0"
           anchorX="center"
           anchorY="middle"
-          maxWidth={2.0}
+          maxWidth={2.2}
           textAlign="left"
+          renderOrder={12}
         >
           {station.start} – {station.end}
         </Text>
