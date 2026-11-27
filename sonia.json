@@ -1,0 +1,232 @@
+{
+    "name": "Soniaa (Sonya) S.",
+    "headline": "Fractional CMO | Crafting Brands People Can Feel | Human Messaging, Clear Strategy & Meaningful Growth | Guiding Teams & Founders to Think Better",
+    "location": "Gurugram, Haryana, India",
+    "about_quote": "I notice what others don't. The gaps, the confusion, the unspoken story, and I help make sense of it.",
+    "about": "Strength is seeing the whole picture: how brand affects revenue, messaging affects conversion, operations affect execution, and people affect everything. Brings structure without chaos.",
+    "services": [
+        "Marketing Strategy",
+        "Brand Marketing",
+        "Brand Consulting",
+        "Content Strategy",
+        "Email Marketing",
+        "Demand Generation",
+        "Leadership Development",
+        "Team Building",
+        "Training",
+        "Management Consulting"
+    ],
+    "stations": [
+        {
+            "chapter": "School",
+            "type": "education",
+            "name": "Ryan International School",
+            "role": "Class X",
+            "start": 1999,
+            "end": 2000,
+            "note": "Debates, dance, volleyball matches"
+        },
+        {
+            "chapter": "School",
+            "type": "education",
+            "name": "Vidya Mandir School",
+            "role": "Non-Medical (Chemistry, Physics, Maths, English, PE)",
+            "start": 2001,
+            "end": 2002,
+            "note": "National Volleyball team participation"
+        },
+        {
+            "chapter": "College",
+            "type": "education",
+            "name": "Maharshi Dayanand University",
+            "role": "B.E. Electronics & Telecommunication",
+            "start": 2002,
+            "end": 2006,
+            "note": "PDP classes, fest organising team, conducted the monthly newspaper"
+        },
+        {
+            "chapter": "Corporate",
+            "type": "work",
+            "name": "Bosch",
+            "role": "Marketing Management Trainee, then Marketing Specialist",
+            "start": 2006,
+            "end": 2008,
+            "place": "Bengaluru; India & Hong Kong",
+            "note": "New product launches and re-launches, Google AdWords PPC, trend analysis via Eloqua and Google Analytics"
+        },
+        {
+            "chapter": "B-schools",
+            "type": "education",
+            "name": "Indian Institute of Management Bangalore",
+            "role": "Executive MBA, Marketing",
+            "start": 2007,
+            "end": 2008,
+            "note": "Worked on a project of strategies with CM University"
+        },
+        {
+            "chapter": "B-schools",
+            "type": "education",
+            "name": "Symbiosis Institute of Management Studies",
+            "role": "PGDBM, Marketing & Sales",
+            "start": 2007,
+            "end": 2009,
+            "note": "Active in personal development programs"
+        },
+        {
+            "chapter": "Corporate",
+            "type": "work",
+            "name": "FARO Technologies",
+            "role": "Marketing & Communication Manager, India then Asia",
+            "start": 2008,
+            "end": 2010,
+            "note": "Led marketing strategy and measurement; built sales toolkit; owned website and knowledge-base content"
+        },
+        {
+            "chapter": "Corporate",
+            "type": "work",
+            "name": "Creaform Inc.",
+            "role": "Head of Marketing and Sales",
+            "start": 2010,
+            "end": 2013,
+            "place": "United States",
+            "note": "Lead nurturing to sales-qualified leads; managed client marketing programs"
+        },
+        {
+            "chapter": "Entrepreneur",
+            "type": "work",
+            "name": "Own venture",
+            "role": "Founder | CEO",
+            "start": 2013,
+            "end": 2014,
+            "place": "India"
+        },
+        {
+            "chapter": "Entrepreneur",
+            "type": "work",
+            "name": "ShowMeLeads Inc",
+            "role": "Manager, then Senior Manager - Demand Generation & Marketing Automation",
+            "start": 2013,
+            "end": 2014,
+            "place": "San Francisco Bay Area",
+            "note": "1,200 new opportunities and 100 closed deals in 2014; lead scoring models; Marketo + Salesforce nurturing at 80% delivery rate"
+        },
+        {
+            "chapter": "Entrepreneur",
+            "type": "work",
+            "name": "Appirio",
+            "role": "Sr. Demand Gen Manager, promoted to Director - Demand Gen, Marketing & Sales Ops",
+            "start": 2014,
+            "end": 2015,
+            "note": "Promoted within 6 months; built the Jaipur Marketing Center, a team of 15, including hiring and training"
+        },
+        {
+            "chapter": "Entrepreneur",
+            "type": "work",
+            "name": "Sonia Specialist",
+            "role": "Digital Consultant, then Consulting Specialist",
+            "start": 2013,
+            "end": "present",
+            "place": "Gurugram",
+            "note": "Free consultancy helping startups become \"Modern Marketers\"; researched free social media management tools for small businesses"
+        },
+        {
+            "chapter": "Entrepreneur",
+            "type": "work",
+            "name": "Brand Tadkaa",
+            "role": "Advisory Board Member",
+            "start": 2014,
+            "end": 2019,
+            "place": "San Diego, CA",
+            "note": "Helped build pipeline and revenue"
+        },
+        {
+            "chapter": "Global leadership",
+            "type": "work",
+            "name": "Lasersec Technologies (LT)",
+            "role": "Director - Demand Gen & Sales, then VP Global Sales Marketing",
+            "start": 2016,
+            "end": 2018,
+            "note": "Led a team of 20+ across digital, demand, marketing ops, web and sales development; #FightFakes anti-counterfeit hologram campaigns"
+        },
+        {
+            "chapter": "Global leadership",
+            "type": "work",
+            "name": "RoundGlass",
+            "role": "Leader - Digital Marketing, then Digital Marketing Director",
+            "start": 2018,
+            "end": 2020,
+            "note": "Aligned campaigns with long-term business goals"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "i-SmokeStack",
+            "role": "Chief Marketing Officer",
+            "start": 2020,
+            "end": "present",
+            "place": "United States",
+            "note": "Marketing strategy and brand for early-stage startups and global teams"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "Datt Mediproducts Pvt. Ltd.",
+            "role": "Fractional CMO",
+            "start": 2020,
+            "end": "present",
+            "place": "New Delhi"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "Lasersec Technologies (LT)",
+            "role": "VP Product Marketing",
+            "start": 2021,
+            "end": "present",
+            "note": "Connecting product and marketing initiatives across global markets"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "AYU Inc USA",
+            "role": "Chief Marketing & Operations Advisor",
+            "start": 2023,
+            "end": "present",
+            "place": "Boston, MA"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "AYU Lifescience",
+            "role": "Fractional Marketing Lead",
+            "start": 2025,
+            "end": "present",
+            "place": "Dubai",
+            "note": "Product communication, website and a TGA-aligned brand experience for UAE medical buyers"
+        },
+        {
+            "chapter": "Fractional CMO era",
+            "type": "work",
+            "name": "Celestial AI",
+            "role": "Chief Marketing & Operations Advisor",
+            "start": 2025,
+            "end": "present",
+            "place": "Noida (remote)"
+        }
+    ],
+    "certifications_summary": "21 certifications: HubSpot Academy (2019-2020, many), Google Fundamentals of Digital Marketing (2020), Google Analytics (2014), Salesforce Administrator (2014), Marketo Certified Expert (2013), Eloqua Product Master (2012)",
+    "volunteering": [
+        {
+            "name": "Open Doors Group",
+            "role": "Marketing",
+            "start": 2015,
+            "end": 2016
+        },
+        {
+            "name": "Project Heena",
+            "role": "Digital Marketing Consultant",
+            "start": 2014,
+            "end": "present"
+        }
+    ]
+}
