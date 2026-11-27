@@ -24,7 +24,14 @@
             "role": "Class X",
             "start": 1999,
             "end": 2000,
-            "note": "Debates, dance, volleyball matches"
+            "note": "Debates, dance, volleyball matches",
+            "logo": null,
+            "website": null,
+            "skills": [
+                "Debate",
+                "Dance",
+                "Volleyball"
+            ]
         },
         {
             "chapter": "School",
@@ -33,7 +40,15 @@
             "role": "Non-Medical (Chemistry, Physics, Maths, English, PE)",
             "start": 2001,
             "end": 2002,
-            "note": "National Volleyball team participation"
+            "note": "National Volleyball team participation",
+            "logo": null,
+            "website": null,
+            "skills": [
+                "Volleyball (National team)",
+                "Physics",
+                "Chemistry",
+                "Maths"
+            ]
         },
         {
             "chapter": "College",
@@ -42,7 +57,15 @@
             "role": "B.E. Electronics & Telecommunication",
             "start": 2002,
             "end": 2006,
-            "note": "PDP classes, fest organising team, conducted the monthly newspaper"
+            "note": "PDP classes, fest organising team, conducted the monthly newspaper",
+            "logo": "/logos/mdu.svg",
+            "website": "https://www.mdu.ac.in",
+            "skills": [
+                "Electronics & Telecom",
+                "Event Organising",
+                "Editorial",
+                "Personal Development"
+            ]
         },
         {
             "chapter": "Corporate",
@@ -52,7 +75,15 @@
             "start": 2006,
             "end": 2008,
             "place": "Bengaluru; India & Hong Kong",
-            "note": "New product launches and re-launches, Google AdWords PPC, trend analysis via Eloqua and Google Analytics"
+            "note": "New product launches and re-launches, Google AdWords PPC, trend analysis via Eloqua and Google Analytics",
+            "logo": "/logos/bosch.svg",
+            "website": "https://www.bosch.com",
+            "skills": [
+                "PPC",
+                "Eloqua",
+                "Google Analytics",
+                "Product Marketing"
+            ]
         },
         {
             "chapter": "B-schools",
@@ -61,7 +92,14 @@
             "role": "Executive MBA, Marketing",
             "start": 2007,
             "end": 2008,
-            "note": "Worked on a project of strategies with CM University"
+            "note": "Worked on a project of strategies with CM University",
+            "logo": "/logos/iimb.svg",
+            "website": "https://www.iimb.ac.in",
+            "skills": [
+                "Marketing",
+                "Strategy",
+                "Executive MBA"
+            ]
         },
         {
             "chapter": "B-schools",
@@ -70,7 +108,14 @@
             "role": "PGDBM, Marketing & Sales",
             "start": 2007,
             "end": 2009,
-            "note": "Active in personal development programs"
+            "note": "Active in personal development programs",
+            "logo": "/logos/sims.svg",
+            "website": "https://www.sims.edu",
+            "skills": [
+                "Marketing",
+                "Sales",
+                "Personal Development"
+            ]
         },
         {
             "chapter": "Corporate",
@@ -79,7 +124,16 @@
             "role": "Marketing & Communication Manager, India then Asia",
             "start": 2008,
             "end": 2010,
-            "note": "Led marketing strategy and measurement; built sales toolkit; owned website and knowledge-base content"
+            "note": "Led marketing strategy and measurement; built sales toolkit; owned website and knowledge-base content",
+            "logo": "/logos/faro.svg",
+            "website": "https://www.faro.com",
+            "skills": [
+                "Marketing Strategy",
+                "Sales Enablement",
+                "Content Management",
+                "Email Strategy",
+                "Teamwork"
+            ]
         },
         {
             "chapter": "Corporate",
@@ -89,7 +143,16 @@
             "start": 2010,
             "end": 2013,
             "place": "United States",
-            "note": "Lead nurturing to sales-qualified leads; managed client marketing programs"
+            "note": "Lead nurturing to sales-qualified leads; managed client marketing programs",
+            "logo": null,
+            "website": "https://www.creaform3d.com",
+            "skills": [
+                "Lead Nurturing",
+                "Email Marketing",
+                "SEO",
+                "Paid Keyword Marketing",
+                "Market Research"
+            ]
         },
         {
             "chapter": "Entrepreneur",
@@ -98,7 +161,14 @@
             "role": "Founder | CEO",
             "start": 2013,
             "end": 2014,
-            "place": "India"
+            "place": "India",
+            "note": "Her first founder role.",
+            "logo": null,
+            "website": null,
+            "skills": [
+                "Market Research",
+                "Email Strategy"
+            ]
         },
         {
             "chapter": "Entrepreneur",
@@ -108,7 +178,17 @@
             "start": 2013,
             "end": 2014,
             "place": "San Francisco Bay Area",
-            "note": "1,200 new opportunities and 100 closed deals in 2014; lead scoring models; Marketo + Salesforce nurturing at 80% delivery rate"
+            "note": "1,200 new opportunities and 100 closed deals in 2014; lead scoring models; Marketo + Salesforce nurturing at 80% delivery rate",
+            "logo": "/logos/showmeleads.svg",
+            "website": null,
+            "skills": [
+                "Marketo",
+                "Salesforce",
+                "Lead Scoring",
+                "Email Marketing",
+                "Market Research",
+                "Teamwork"
+            ]
         },
         {
             "chapter": "Entrepreneur",
@@ -117,7 +197,16 @@
             "role": "Sr. Demand Gen Manager, promoted to Director - Demand Gen, Marketing & Sales Ops",
             "start": 2014,
             "end": 2015,
-            "note": "Promoted within 6 months; built the Jaipur Marketing Center, a team of 15, including hiring and training"
+            "note": "Promoted within 6 months; built the Jaipur Marketing Center, a team of 15, including hiring and training",
+            "logo": "/logos/appirio.svg",
+            "website": "https://appirio.com",
+            "skills": [
+                "Demand Generation",
+                "Sales Operations",
+                "Hiring & Training",
+                "Email Strategy",
+                "Problem Solving"
+            ]
         },
         {
             "chapter": "Entrepreneur",
@@ -127,7 +216,16 @@
             "start": 2013,
             "end": "present",
             "place": "Gurugram",
-            "note": "Free consultancy helping startups become \"Modern Marketers\"; researched free social media management tools for small businesses"
+            "note": "Free consultancy helping startups become \"Modern Marketers\"; researched free social media management tools for small businesses",
+            "logo": "/logos/sonia-specialist.svg",
+            "website": "https://www.soniaspecialist.com",
+            "skills": [
+                "Copywriting",
+                "Market Research",
+                "Email Strategy",
+                "Content Management",
+                "Consulting"
+            ]
         },
         {
             "chapter": "Entrepreneur",
@@ -137,7 +235,14 @@
             "start": 2014,
             "end": 2019,
             "place": "San Diego, CA",
-            "note": "Helped build pipeline and revenue"
+            "note": "Helped build pipeline and revenue",
+            "logo": null,
+            "website": null,
+            "skills": [
+                "Copywriting",
+                "Market Research",
+                "Pipeline Building"
+            ]
         },
         {
             "chapter": "Global leadership",
@@ -146,7 +251,16 @@
             "role": "Director - Demand Gen & Sales, then VP Global Sales Marketing",
             "start": 2016,
             "end": 2018,
-            "note": "Led a team of 20+ across digital, demand, marketing ops, web and sales development; #FightFakes anti-counterfeit hologram campaigns"
+            "note": "Led a team of 20+ across digital, demand, marketing ops, web and sales development; #FightFakes anti-counterfeit hologram campaigns",
+            "logo": "/logos/lasersec.svg",
+            "website": null,
+            "skills": [
+                "Demand Generation",
+                "Marketing Operations",
+                "Copywriting",
+                "Email Strategy",
+                "Team Leadership"
+            ]
         },
         {
             "chapter": "Global leadership",
@@ -155,7 +269,15 @@
             "role": "Leader - Digital Marketing, then Digital Marketing Director",
             "start": 2018,
             "end": 2020,
-            "note": "Aligned campaigns with long-term business goals"
+            "note": "Aligned campaigns with long-term business goals",
+            "logo": "/logos/roundglass.svg",
+            "website": null,
+            "skills": [
+                "Digital Marketing",
+                "Copywriting",
+                "Email Strategy",
+                "Team Mentoring"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -165,7 +287,15 @@
             "start": 2020,
             "end": "present",
             "place": "United States",
-            "note": "Marketing strategy and brand for early-stage startups and global teams"
+            "note": "Marketing strategy and brand for early-stage startups and global teams",
+            "logo": "/logos/i-smokestack.svg",
+            "website": "https://i-smokestack.com",
+            "skills": [
+                "Brand Strategy",
+                "Lead Generation",
+                "Copywriting",
+                "Teamwork"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -174,7 +304,15 @@
             "role": "Fractional CMO",
             "start": 2020,
             "end": "present",
-            "place": "New Delhi"
+            "place": "New Delhi",
+            "note": "Marketing strategy and brand initiatives focused on engagement, visibility and customer acquisition",
+            "logo": "/logos/datt-mediproducts.svg",
+            "website": null,
+            "skills": [
+                "Brand Strategy",
+                "Customer Acquisition",
+                "Team Alignment"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -183,7 +321,16 @@
             "role": "VP Product Marketing",
             "start": 2021,
             "end": "present",
-            "note": "Connecting product and marketing initiatives across global markets"
+            "note": "Connecting product and marketing initiatives across global markets",
+            "logo": "/logos/lasersec.svg",
+            "website": null,
+            "skills": [
+                "Product Marketing",
+                "Messaging",
+                "Brand Presence",
+                "Copywriting",
+                "Teamwork"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -192,7 +339,15 @@
             "role": "Chief Marketing & Operations Advisor",
             "start": 2023,
             "end": "present",
-            "place": "Boston, MA"
+            "place": "Boston, MA",
+            "note": "Marketing and operational strategy for a new startup, built from the ground up",
+            "logo": "/logos/ayu.svg",
+            "website": null,
+            "skills": [
+                "Marketing Strategy",
+                "Operations Strategy",
+                "Startup Building"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -202,7 +357,15 @@
             "start": 2025,
             "end": "present",
             "place": "Dubai",
-            "note": "Product communication, website and a TGA-aligned brand experience for UAE medical buyers"
+            "note": "Product communication, website and a TGA-aligned brand experience for UAE medical buyers",
+            "logo": "/logos/ayu.svg",
+            "website": null,
+            "skills": [
+                "Product Communication",
+                "Website Development",
+                "CRM Tracking",
+                "Brand Experience"
+            ]
         },
         {
             "chapter": "Fractional CMO era",
@@ -211,7 +374,15 @@
             "role": "Chief Marketing & Operations Advisor",
             "start": 2025,
             "end": "present",
-            "place": "Noida (remote)"
+            "place": "Noida (remote)",
+            "note": "Marketing and operational strategy for a new startup, built from the ground up",
+            "logo": "/logos/celestial-ai.svg",
+            "website": "https://www.celestial.ai",
+            "skills": [
+                "Marketing Strategy",
+                "Operations Strategy",
+                "Startup Building"
+            ]
         }
     ],
     "certifications_summary": "21 certifications: HubSpot Academy (2019-2020, many), Google Fundamentals of Digital Marketing (2020), Google Analytics (2014), Salesforce Administrator (2014), Marketo Certified Expert (2013), Eloqua Product Master (2012)",
@@ -226,7 +397,8 @@
             "name": "Project Heena",
             "role": "Digital Marketing Consultant",
             "start": 2014,
-            "end": "present"
+            "end": "present",
+            "website": "https://projectheena.com"
         }
     ]
 }

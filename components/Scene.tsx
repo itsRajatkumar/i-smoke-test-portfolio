@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { PATH_COORDS, chapters, StationData } from "@/lib/chapters";
 import { World } from "./World";
+import { Road } from "./Road";
 import { Character } from "./Character";
 import { Landmark } from "./Landmark";
 import { Tower } from "./Tower";
@@ -52,7 +53,7 @@ function Experience({ onSelectStation }: ExperienceProps) {
         const nz = tangent.x;
         const len = Math.sqrt(nx * nx + nz * nz) || 1;
         const side = sIdx % 2 === 0 ? 1 : -1;
-        const offset = 3.6;
+        const offset = 4.2; // Generous clearance from road
 
         return {
           station,
@@ -72,16 +73,13 @@ function Experience({ onSelectStation }: ExperienceProps) {
     <>
       <World />
 
-      {/* Visible path (refined stone border and pathway along the curve) */}
-      <mesh>
-        <tubeGeometry args={[curve, 350, 0.18, 8, false]} />
-        <meshStandardMaterial color="#B58D3D" roughness={0.65} metalness={0.1} />
-      </mesh>
+      {/* Realistic Asphalt Roadway with Curbs and Yellow Dashed Centerline */}
+      <Road curve={curve} />
 
       {/* Realistic female character in Indian attire */}
       <Character curve={curve} />
 
-      {/* Render interactive landmarks for ALL stations */}
+      {/* Render distinctive architectural landmarks for ALL stations */}
       {landmarks.map((l) => (
         <Landmark
           key={`${l.station.name}-${l.station.start}`}
