@@ -49,3 +49,40 @@
 - **Canvas Pointer Events:** Changed from `pointer-events: none` to allowing
   interactive 3D click/tap raycasting while window scroll cleanly propagates for desktop
   mouse wheels and mobile touch gestures.
+
+---
+
+## Slice 3 — Backend API, Contact Form, Anonymous Analytics & Admin Dashboard
+
+**Date:** 2026-11-27
+
+### Decisions & Implementation
+
+- **Database Client with In-Memory Fallback:** Implemented `@supabase/supabase-js` client
+  with automatic local in-memory fallback. This guarantees that during development or evaluation
+  without active Supabase credentials, all contact messages and analytics events persist in memory
+  without crashing or throwing network exceptions.
+- **Contact API (`POST /api/contact`):**
+  - Name, email (strict regex), and message validation.
+  - Honeypot hidden input trapping (`company_website`) to silently reject spam bots.
+  - In-memory rate limiting (max 5 submissions per 15 minutes per client IP).
+  - Supabase-only storage (per approved plan decisions; no external mail service required).
+- **Anonymous Analytics Engine (`POST /api/events`):**
+  - Zero PII: anonymous session UUID generated and stored strictly in client `sessionStorage`.
+  - Non-blocking `fetch` dispatch with `keepalive: true`.
+  - Tracks:
+    - `chapter_enter`: emitted immediately upon scrolling into a chapter.
+    - `chapter_dwell_ms`: computes exact milliseconds spent within an era before leaving or unloading.
+    - `station_open`: records which landmark card was opened.
+    - `scroll_depth`: records milestone achievements at 25%, 50%, 75%, and 100%.
+    - `cta_click`: records clicks on contact buttons.
+    - `form_submit`: records successful inquiries.
+- **Final Scene Contact Form:**
+  - Docked on the bottom-right in the terminal Fractional CMO / i-SmokeStack era.
+  - Accessible modal fallback available from the top-right header CTA on all devices.
+  - Also embedded within the 2D accessible fallback view.
+- **Admin Portal (`/admin`):**
+  - Password-gated using `ADMIN_PASSWORD` (defaults to `admin123`).
+  - Real-time KPI summary (Unique Visitors, Total Inquiries, Tracked Events).
+  - Visual horizontal bar charts for Chapter Drop-off Funnel and Most Opened Career Stations.
+  - Full Messages Inbox with sender info, timestamps, and full messages.
